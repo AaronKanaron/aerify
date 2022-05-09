@@ -3,16 +3,16 @@ import { SafeAreaView, Text, StatusBar, View } from "react-native";
 import Footer from "../components/molecules/Footer";
 import Navbar from "../components/molecules/Navbar";
 
-import { styles } from "../Style";
+import { styles, defaults } from "../Style";
 
 export default class Home extends React.PureComponent {
 	render() {
 		return (
-			<SafeAreaView style={styles.container}>
+			<SafeAreaView style={defaults.container}>
 				<Navbar/>
 
-				<View style={styles.main}>
-					<Text style={styles.text}>
+				<View style={defaults.main}>
+					<Text style={defaults.text}>
 						SEARCH
 					</Text>
 				</View>

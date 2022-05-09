@@ -1,4 +1,4 @@
-// so this is basically this is basically you know the CSS countrerbart of REact Native, made by facebook for the app in the app in the run on this ssytem as the styles.js file.
+import { StyleSheet } from "react-native";
 
 const vars = {
 	// colors
@@ -8,11 +8,7 @@ const vars = {
 }
 
 
-import {
-	StyleSheet
-} from "react-native";
-
-const styles = StyleSheet.create({
+const defaults = StyleSheet.create({
 	container: {
 		flex: 1,
 		backgroundColor: vars.primaryBackground,
@@ -21,13 +17,7 @@ const styles = StyleSheet.create({
 	main: {
 		width: "100%",
 		paddingHorizontal: "5%",
-		
-	},
 
-	pfp: {
-		height: "55%",
-		aspectRatio: 1,
-		borderRadius: 100,
 	},
 
 	text: {
@@ -35,22 +25,69 @@ const styles = StyleSheet.create({
 		color: vars.primaryText,
 		fontWeight: 'bold',
 		// fontFamily: "NotoSansBold"
-		
+
 	},
 
-	icon:{
-		color: "red",
-		fontSize: 30,
+	pfp: {
+		height: "55%",
+		aspectRatio: 1,
+		borderRadius: 100,
 	},
-
-	image: {
-		width: "100%",
-		height: 500,
-		marginVertical: 16,
-	},
-
 });
 
+
+const styles = {
+	footer: StyleSheet.create({
+		footer: {
+			position: "absolute",
+			bottom: 0,
+			height: 128,
+			width: "100%",
+
+			display: "flex",
+			flexDirection: "row",
+			justifyContent: "space-evenly",
+			alignItems: "center",
+		},
+	}),
+
+	header: StyleSheet.create({
+		header: {
+			position: "relative",
+			top: 0,
+			width: "100%",
+			height: 84,
+
+			display: "flex",
+			flexDirection: "row",
+			justifyContent: "space-between",
+			alignItems: "center",
+			paddingHorizontal: "5%",
+			marginBottom: 16,
+		},
+
+		headerItem:{
+			flex: 1,
+			height: "100%",
+			display: "flex",
+			flexDirection: "row",
+			alignItems: "center",
+			justifyContent: "center",
+		},
+
+		headerText: {
+			fontSize: 20,
+			color: vars.primaryText,
+			fontWeight: "400",
+		},
+	}),
+
+
+	
+};
+
 export {
-	styles, vars
+	defaults,
+	styles,
+	vars
 };

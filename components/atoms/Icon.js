@@ -18,7 +18,7 @@ export class IonIcons extends React.PureComponent {
 
 	render() {
 		return (
-			<TouchableOpacity activeOpacity={0.8} onPress={this.props.onPress && this.props.onPress()}>
+			<TouchableOpacity activeOpacity={0.75} onPress={this.props.onPress && this.props.onPress()}>
 				<IonIconsLib name={this.name} size={DefaultValues.iconSize} color={DefaultValues.iconColor} {...this.props} />
 			</TouchableOpacity>
 		)

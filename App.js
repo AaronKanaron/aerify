@@ -7,8 +7,8 @@ import { useFonts } from 'expo-font';
 const Stack = createNativeStackNavigator();
 
 // Mains
-import Home from "./sceens/Home";
-import Search from "./sceens/Search";
+import Home from "./scenes/Home";
+import Search from "./scenes/Search";
 
 export default function App() {
 	const [fontsLoaded] = useFonts({
